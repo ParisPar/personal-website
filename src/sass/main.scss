@@ -1,0 +1,251 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+// @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+
+$lato: 'Lato', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+// $roboto: 'Roboto', sans-serif;
+
+$beige: #F3EFE0;
+$dark-grey: #333;
+$very-dark-grey: #222;
+
+$nav-link: #bbb;
+
+$jumbotron-height: 700px;
+
+body {
+  font-family: $lato;
+}
+
+h1 {
+  text-align: center;
+}
+
+/*
+ ****** Navigation bar *******
+ */
+.navbar-default {
+  border: none;
+  background-color: transparent;
+  margin-bottom: 0;
+  .navbar-nav {
+    font-size: 12px;
+    letter-spacing: 2px;
+    float:none;
+    display: block;
+    margin: 0 40px;
+    > li.active > a {
+      &, &:hover, &:active, &:visited, &:focus {
+        color: $nav-link !important;
+        transition: color 0.20s ease-in-out;
+        background-color: inherit;
+      }
+    }
+    > li > a {
+      &, &:hover, &:active, &:visited, &:focus {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-transform: uppercase;
+        color: white;
+        @media only screen and (max-width: 767px) {
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+      }
+      &:hover {
+        color: $nav-link;
+        transition: color 0.20s ease-in-out;
+      }
+   
+    }  
+  }
+  &-toggle {
+    margin: 13px;
+  }
+  &.navbar-on {
+    background-color: $very-dark-grey;
+    transition: background-color 0.4s ease-in-out;
+     > li.active > a  {
+      background-color: $very-dark-grey;
+    }
+  }
+  color: white;
+  @media only screen and (max-width: 767px) {
+    background-color: $very-dark-grey;
+  }
+}
+
+/*
+ ****** Jumbotron *******
+ */
+.jumbotron {
+  background: url(../images/2.jpg) no-repeat center center;
+  padding: 0;
+  margin-bottom: 0;
+  width: 100%;
+  height: $jumbotron-height;
+  overflow: hidden;
+  .overlay-image {
+    // background: url(../images/patternoverimage.png) repeat;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: $jumbotron-height;
+    position: absolute;
+    z-index: 2;
+  }
+  .container {
+    /*Center Vertically Snippet*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 3;
+  }
+  h1 {
+    font-weight: bold;
+  }
+  h1, h2 {
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+    z-index: 3;  
+  }
+  hr {
+    width: 500px;
+    border-color: rgba(255,255,255,0.3);
+  }
+  .scroll-icon {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    a {
+      color: white;
+      font-size: 50px;
+      &:hover {
+        color: #ddd;
+      }
+    }
+  }
+}
+
+/*
+ ****** All content below jumbotron *******
+ */
+main {
+  font-family: $open-sans;
+  color: #444;
+  min-width: 480px;
+
+  //General styles for all sections
+  .content-section {
+    padding: 60px 100px;
+    @media only screen and (max-width: 767px) {
+      padding: 60px 40px;
+    } 
+    h1 {
+      font-size: 54px;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+    hr{
+      border-color: rgba(0,0,0,0.2);
+      margin-bottom: 40px
+    }
+  }
+  .section-fill {
+    background-color: $beige;
+  }
+ 
+  //Profile Section
+  #profile {
+    img {
+      margin: 0 auto;
+      max-width: 275px;
+    }
+  }
+
+  //Skills Section
+  #skills {
+    h3 {
+      margin-bottom: 20px;
+    }
+    .row div:nth-child(2n+1) {
+       clear: both;
+    }
+    ul li {
+      padding: 2px 3px;
+      &:hover {
+        background-color: #ddd;
+        font-weight: bold;
+        transition: all 0.2s;
+        .ability-score {
+          transform: scale(1.1);
+          transition: all 0.2s;
+        }
+      }
+    }
+    .ability-score {
+      float: right;
+    }
+    .glyphicon {
+      margin-left: 4px;//Needed because Vue.js doesn't put spaces between elements when rendering through v-for
+      color: #ccc;
+      &.filled {
+        color: #03f;
+      }
+    }
+  }
+
+  //Education Section
+  #education {
+    h4, h5 {
+      font-weight: bold;
+    }
+    .lead {
+      font-size: 16px;
+    }
+    
+  }
+
+  //Contact Section
+  #contact {
+    li {
+      margin-bottom: 20px;
+      line-height: 45px;
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+      &:hover {
+        color: #555;
+      }
+      i {
+        font-size: 35px;
+        vertical-align: middle;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+footer {
+  .content-section {
+    padding: 60px 100px;
+  }
+  .dark-fill {
+    background-color: $very-dark-grey;
+  }
+  p {
+    color: white;
+    text-align: center;
+  }
+  a, a:hover {
+    color: white
+  }
+}

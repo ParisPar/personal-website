@@ -1,0 +1,120 @@
+
+{
+  "Front-End": {
+    "skills": [
+      {
+        "name": "HTML5",
+        "level": 5
+      },
+      {
+        "name": "CSS3",
+        "level": 5
+      },
+      {
+        "name": "Javascript",
+        "level": 5
+      },
+      {
+        "name": "jQuery",
+        "level": 5
+      },
+      {
+        "name": "Bootstrap",
+        "level": 4
+      },
+      {
+        "name": "Sass",
+        "level": 4
+      },
+      {
+        "name": "AJAX & JSON",
+        "level": 4
+      },
+      {
+        "name": "AngularJS",
+        "level": 3
+      }
+    ]
+  },
+  "Back-End": {
+    "skills": [
+      {
+        "name": "PHP",
+        "level": 5
+      },
+      {
+        "name": "MySQL",
+        "level": 5
+      },
+      {
+        "name": "Phalcon",
+        "level": 4
+      },
+      {
+        "name": "Laravel",
+        "level": 4
+      },
+      {
+        "name": "Firebase (Baas)",
+        "level": 3
+      },
+      {
+        "name": "Wordpress",
+        "level": 3
+      }
+    ]
+  },
+  
+  "Tools & Testing": {
+    "skills": [
+      {
+        "name": "Linux Command Line",
+        "level": 4
+      },
+      {
+        "name": "Git & Github",
+        "level": 4
+      },
+      {
+        "name": "Gulp",
+        "level": 4
+      },
+      {
+        "name": "Composer",
+        "level": 4
+      },
+      {
+        "name": "Npm",
+        "level": 4
+      },
+      {
+        "name": "Codeception + Selenium",
+        "level": 3
+      },
+      {
+        "name": "Photoshop",
+        "level": 2
+      }
+    ]
+  },
+  "Paradigms & Design Patterns": {
+    "skills": [
+      {
+        "name": "Object-Oriented Programming",
+        "level": 5
+      },
+      {
+        "name": "MVC Architecture",
+        "level": 4
+      },
+      {
+        "name": "REST APIs",
+        "level": 4
+      },
+      {
+        "name": "Responsive Web Design",
+        "level": 4
+      }
+    ]
+  }
+}
