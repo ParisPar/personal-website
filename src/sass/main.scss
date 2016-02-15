@@ -114,6 +114,9 @@ h1 {
   hr {
     width: 500px;
     border-color: rgba(255,255,255,0.3);
+    @media only screen and (max-width: 767px) {
+      width: 250px;
+    }
   }
   .scroll-icon {
     display: block;
